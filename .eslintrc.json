@@ -32,7 +32,9 @@
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
     "max-len": ["warn", { "code": 100 }],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "no-param-reassign": 0
   },
   "settings": {
     "import/resolver": {
