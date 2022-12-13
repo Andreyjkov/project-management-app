@@ -1,5 +1,5 @@
 import React from 'react';
 
-export function Boards() {
+export function BoardsPage() {
   return <h1>Boards page</h1>;
 }

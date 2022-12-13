@@ -1,6 +1,6 @@
-export { NotFound } from './NotFound/NotFound';
-export { Boards } from './Boards/Boards';
-export { Profile } from './Profile/Profile';
-export { SignIn } from './SignIn/SignIn';
-export { SignUp } from './SignUp/SignUp';
-export { Welcome } from './Welcome/Welcome';
+export { NotFoundPage } from './NotFound/NotFoundPage';
+export { BoardsPage } from './Boards/BoardsPage';
+export { ProfilePage } from './Profile/ProfilePage';
+export { SignInPage } from './SignIn/SignInPage';
+export { SignUpPage } from './SignUp/SignUpPage';
+export { WelcomePage } from './Welcome/WelcomePage';
