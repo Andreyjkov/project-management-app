@@ -1,14 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import {
-  BoardsPage,
-  NotFoundPage,
-  ProfilePage,
-  SignInPage,
-  SignUpPage,
-  WelcomePage,
-} from './pages';
+import { BoardsPage } from './pages/Boards/BoardsPage';
+import { NotFoundPage } from './pages/NotFound/NotFoundPage';
+import { ProfilePage } from './pages/Profile/ProfilePage';
+import { SignInPage } from './pages/SignIn/SignInPage';
+import { SignUpPage } from './pages/SignUp/SignUpPage';
+import { WelcomePage } from './pages/Welcome/WelcomePage';
 import store from './store';
 
 function App() {
