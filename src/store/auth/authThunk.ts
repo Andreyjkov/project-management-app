@@ -1,6 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import {
-  ICreateToken, IFormData, IKnownError, IResponseUser, IResponseUserAndToken, ITokenAndId,
+  ICreateToken,
+  IFormData,
+  IKnownError,
+  IResponseUser,
+  IResponseUserAndToken,
+  ITokenAndId,
   IUpdateUser,
 } from '../types';
 
@@ -55,7 +60,7 @@ export const signIn = createAsyncThunk<string, ICreateToken, { rejectValue: IKno
     const res: { token: string } = await response.json();
 
     return res.token;
-  },
+  }
 );
 
 export const getUserById = createAsyncThunk<

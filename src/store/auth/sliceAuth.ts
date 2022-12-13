@@ -1,8 +1,6 @@
 import { createSlice, PayloadAction, isAnyOf } from '@reduxjs/toolkit';
 import { IinitialStateAuth, IResponseUser } from '../types';
-import {
-  deleteUser, getUserById, signIn, logout, signUpAndSignIn, updateUser,
-} from './authThunk';
+import { deleteUser, getUserById, signIn, logout, signUpAndSignIn, updateUser } from './authThunk';
 
 const initialState: IinitialStateAuth = {
   user: null,
@@ -129,11 +127,11 @@ const sliceAuth = createSlice({
           signIn.pending,
           getUserById.pending,
           deleteUser.pending,
-          updateUser.pending,
+          updateUser.pending
         ),
         (state) => {
           state.isLoading = true;
-        },
+        }
       )
       .addMatcher(
         isAnyOf(
@@ -141,7 +139,7 @@ const sliceAuth = createSlice({
           signIn.rejected,
           getUserById.rejected,
           deleteUser.rejected,
-          updateUser.rejected,
+          updateUser.rejected
         ),
         (state, action) => {
           state.isLoading = false;
@@ -152,13 +150,11 @@ const sliceAuth = createSlice({
           } else {
             state.message = 'Error Server.';
           }
-        },
+        }
       );
   },
 });
 
-export const {
-  callReset, setUser, setToken, setIsDelete,
-} = sliceAuth.actions;
+export const { callReset, setUser, setToken, setIsDelete } = sliceAuth.actions;
 
 export default sliceAuth.reducer;
