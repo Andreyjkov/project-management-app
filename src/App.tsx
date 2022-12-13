@@ -2,7 +2,12 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import {
-  Boards, NotFound, Profile, SignIn, SignUp, Welcome,
+  BoardsPage,
+  NotFoundPage,
+  ProfilePage,
+  SignInPage,
+  SignUpPage,
+  WelcomePage,
 } from './pages';
 import store from './store';
 
@@ -11,12 +16,12 @@ function App() {
   return (
     <Provider store={store}>
       <Routes>
-        <Route path="/" element={isLoggedIn ? <Welcome /> : <Navigate to="/signin" />} />
-        <Route path="/boards" element={<Boards />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/*" element={<NotFound />} />
+        <Route path='/' element={isLoggedIn ? <WelcomePage /> : <Navigate to='/signin' />} />
+        <Route path='/boards' element={<BoardsPage />} />
+        <Route path='/signin' element={<SignInPage />} />
+        <Route path='/signup' element={<SignUpPage />} />
+        <Route path='/profile' element={<ProfilePage />} />
+        <Route path='/*' element={<NotFoundPage />} />
       </Routes>
     </Provider>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
 
-export function Welcome() {
+export function WelcomePage() {
   return <h1>Welcom page</h1>;
 }
